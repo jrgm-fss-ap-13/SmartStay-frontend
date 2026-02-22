@@ -1,0 +1,56 @@
+<div class="w-full max-w-md">
+    <!-- Card Container -->
+    <div
+        class="flex flex-col items-center rounded-2xl bg-white shadow-xl shadow-slate-200/50 border border-slate-100 p-8 sm:p-12">
+        <!-- Hero Icon -->
+        <div class="mb-8 flex size-24 items-center justify-center rounded-full bg-primary/10 ring-primary/5">
+            <span class="material-symbols-outlined text-primary" style="font-size: 42px;">mark_email_read</span>
+        </div>
+        <!-- Typography Block -->
+        <h1 class="mb-3 text-center text-2xl font-bold tracking-tight text-slate-900">
+            Revisa tu correo electrónico!
+        </h1>
+        <p class="mb-8 text-center text-base leading-relaxed text-slate-600">
+            Hemos enviado un enlace de confirmación a <strong
+                class="text-slate-900">{{correo()}}</strong>. <br
+                class="hidden sm:block" />Por favor, verifica tu cuenta.
+        </p>
+        <!-- Primary Action -->
+        <div class="flex w-full flex-col gap-4">
+            <button
+                class="group flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 text-base font-bold text-white shadow-md shadow-primary/20 transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/30 active:scale-[0.98]">
+                <span>Reenviar correo</span>
+                <span
+                    class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+            </button>
+            <!-- Secondary Action -->
+            <button
+                class="flex h-12 w-full items-center justify-center rounded-xl border border-slate-200 bg-transparent px-6 text-base font-semibold text-slate-700 transition-colors hover:bg-slate-50 ">
+                Cambiar dirección de correo
+            </button>
+        </div>
+        <!-- Divider -->
+        <div class="my-8 h-px w-full bg-slate-100 "></div>
+        <!-- Footer / Spam Notice -->
+        <div class="flex items-start gap-3 rounded-lg bg-slate-50  p-4 text-left">
+            <span class="material-symbols-outlined mt-0.5 shrink-0 text-slate-400 ">info</span>
+            <div class="text-sm text-slate-600 ">
+                <p class="font-medium text-slate-900 ">¿No encuentras el correo?</p>
+                <p class="mt-1">Puede que esté en tu carpeta de spam o correo no deseado.
+                    Si no lo ves después de unos minutos, intenta reenviarlo.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Bottom Links -->
+</div>
+<!-- Decorative Background Elements -->
+<div class="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+    <!-- Soft blue gradient blob top left -->
+    <div
+        class="absolute -left-[10%] -top-[10%] h-[500px] w-[500px] rounded-full bg-primary/5 blur-3xl">
+    </div>
+    <!-- Soft blue gradient blob bottom right -->
+    <div
+        class="absolute -bottom-[10%] -right-[10%] h-[500px] w-[500px] rounded-full bg-primary/5 blur-3xl ">
+    </div>
+</div>

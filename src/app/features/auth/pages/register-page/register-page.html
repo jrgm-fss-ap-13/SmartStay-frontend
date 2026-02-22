@@ -1,0 +1,39 @@
+<div class="max-w-[440px] w-full mx-auto">
+  <!-- Mobile Logo (Visible only on mobile) -->
+  <div class="lg:hidden flex items-center gap-3 mb-10 text-primary">
+    <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+      <span class="material-symbols-outlined text-xl">travel_explore</span>
+    </div>
+    <h2 class="text-xl font-bold tracking-tight text-black">SmartStay</h2>
+  </div>
+  <div class="w-full space-y-4">
+    <div>
+      <h2 class="text-3xl font-bold text-black tracking-tight">Create an account</h2>
+      <p class="text-[#547792] mt-2">Join the modern personalized travel platform.</p>
+    </div>
+    <app-register-form></app-register-form>
+    <div class="relative py-2">
+      <div aria-hidden="true" class="absolute inset-0 flex items-center">
+        <div class="w-full border-t border-[#d2dde5]"></div>
+      </div>
+      <div class="relative flex justify-center text-sm">
+        <span class="bg-white px-4 text-[#547792]">Or sign up with</span>
+      </div>
+    </div>
+    <app-social-buttons></app-social-buttons>
+    <!-- Footer Link -->
+    <p class="text-center text-[#547792] text-sm">
+      Already have an account? 
+      <a class="text-primary font-bold hover:underline ml-1" routerLink="/login">Log In</a>
+    </p>
+  </div>
+  <!-- Language/Theme Selectors (Optional footer elements) -->
+  <div class="mt-6 flex items-center gap-6 text-[#547792] text-xs font-medium">
+    <a class="hover:text-primary" href="#">Help Center</a>
+    <a class="hover:text-primary" href="#">Privacy</a>
+    <a class="hover:text-primary" href="#">Contact</a>
+    <div class="flex items-center gap-1 cursor-pointer hover:text-primary">
+      <span>English (US)</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="bg-background-light min-h-screen">
+
+    <app-navbar-verifiaction></app-navbar-verifiaction>
+    <!-- Main Content Area -->
+    <main class="flex items-center justify-center p-4 flex-1">
+        <div class="max-w-md w-full">
+            <!-- Success Card -->
+            <router-outlet></router-outlet>
+            <!-- Illustration/Pattern Backdrop Decoration -->
+            <div class="mt-12 text-center opacity-50 pointer-events-none">
+                <div class="grid grid-cols-3 gap-4 max-w-[200px] mx-auto">
+                    <div class="h-2 w-full bg-primary/20 rounded-full"></div>
+                    <div class="h-2 w-full bg-primary/40 rounded-full"></div>
+                    <div class="h-2 w-full bg-primary/20 rounded-full"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Simple Footer -->
+    <footer class="py-8 text-center text-slate-400 text-sm">
+        <p>© 2024 SmartStay Inc. All rights reserved.</p>
+        <div class="mt-2 flex justify-center gap-6">
+            <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+            <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+        </div>
+    </footer>
+    <!-- Decorative Elements (Fixed Position) -->
+    <div class="fixed top-0 left-0 w-full h-1  from-primary/20 via-primary to-primary/20 z-50"></div>
+    <div class="fixed -z-10 top-0 left-0 w-full h-full overflow-hidden opacity-30 pointer-events-none">
+        <div class="absolute -top-24 -left-24 size-96 bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-24 -right-24 size-96 bg-primary/10 rounded-full blur-3xl"></div>
+    </div>
+</div>
