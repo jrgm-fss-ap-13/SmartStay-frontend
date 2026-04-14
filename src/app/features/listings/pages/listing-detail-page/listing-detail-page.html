@@ -1,1 +1,21 @@
-<p>listing-detail-page works!</p>,
+@if (listingResource.error()) {
+<p class="max-w-7xl mx-auto px-4 py-8 text-red-600">No se pudo cargar el alojamiento.</p>
+} @else if (listingResource.isLoading()) {
+<p class="max-w-7xl mx-auto px-4 py-8 text-slate-500">Cargando…</p>
+} @else {
+
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <app-listing-detail-header [listing]="listingResource.value()"></app-listing-detail-header>
+    <app-listing-detail-gallery [listing]="listingResource.value()"></app-listing-detail-gallery>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <div class="lg:col-span-2">
+            <app-listing-detail-host-block [listing]="listingResource.value()"></app-listing-detail-host-block>
+            <app-listing-detail-highlights></app-listing-detail-highlights>
+            <app-listing-detail-description-block [listing]="listingResource.value()"></app-listing-detail-description-block>
+            <app-listing-detail-amenities-section [listing]="listingResource.value()"></app-listing-detail-amenities-section>
+            <app-listing-detail-local-recommendations></app-listing-detail-local-recommendations>
+        </div>
+        <app-listing-detail-booking-sidebar [listing]="listingResource.value()"></app-listing-detail-booking-sidebar>
+    </div>
+</main>
+}

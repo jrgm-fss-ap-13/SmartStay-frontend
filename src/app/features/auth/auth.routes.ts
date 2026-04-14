@@ -7,6 +7,7 @@ import { ForgotPassword } from './pages/forgot-password/forgot-password';
 import { VerificationLayout } from '../../layout/pages/verificationLayout/verificationLayout';
 import { EmailVerified } from './pages/email-verified/email-verified';
 import { ConfirmEmail } from './pages/confirm-email/confirm-email';
+import { publicGuard } from './guards/public.guard';
 
 export const AUTH_ROUTES: Routes = [
 
@@ -24,13 +25,16 @@ export const AUTH_ROUTES: Routes = [
                 component: ResetPassword
             },
             {
-                path: 'email-verified',
+                path: 'email-verified/:uid/:token',
+                canActivate: [publicGuard],
                 component: EmailVerified
             },
-            {   path: 'confirm-email',
+            {
+                path: 'confirm-email',
+                canActivate: [publicGuard],
                 component: ConfirmEmail
             }
-        
+
         ]
     },
     {
@@ -41,10 +45,12 @@ export const AUTH_ROUTES: Routes = [
 
             {
                 path: 'login',
+                canActivate: [publicGuard],
                 component: LoginPage
             },
             {
                 path: 'register',
+                canActivate: [publicGuard],
                 component: RegisterPage
             },
             {

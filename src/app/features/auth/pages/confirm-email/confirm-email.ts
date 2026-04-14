@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthStore } from '../../store/auth.store';
 
 @Component({
   selector: 'app-confirm-email',
@@ -9,6 +11,9 @@ import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 })
 export class ConfirmEmail { 
 
-  correo = signal('jrgm.fss@gmail.com');
+  private authStore = inject(AuthStore);
+  correo = this.authStore.emailToConfirm;
+
+  
 
 }

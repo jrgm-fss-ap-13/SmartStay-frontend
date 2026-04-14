@@ -1,10 +1,394 @@
-
-
-
-<app-listing-form-index></app-listing-form-index>
-
-<app-listing-place-category></app-listing-place-category>
-
-<app-listing-recommended></app-listing-recommended>
-
-<app-listing-popular-destination></app-listing-popular-destination>
+<div class="bg-white border-b border-slate-200 py-4">
+        <div class="max-w-[1440px] mx-auto px-6 flex flex-wrap items-center justify-between gap-4">
+                <div>
+                        <h1 class="text-xl font-semibold">Stays in Santorini, Greece</h1>
+                        <p class="text-sm text-slate-500">328 properties found • Sep 12 - Sep 18 • 2 Guests</p>
+                </div>
+                <div class="flex items-center gap-3">
+                        <div class="flex bg-slate-100 p-1 rounded-xl">
+                                <button
+                                        class="flex items-center gap-2 px-4 py-1.5 rounded-lg bg-white shadow-sm text-sm font-medium">
+                                        <span class="material-symbols-outlined text-[18px]">grid_view</span> Grid
+                                </button>
+                                <button
+                                        class="flex items-center gap-2 px-4 py-1.5 rounded-lg text-slate-500 text-sm font-medium hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined text-[18px]">map</span> Map
+                                </button>
+                        </div>
+                        <button
+                                class="md:hidden flex items-center gap-2 px-4 py-2 bg-slate-100 rounded-xl text-sm font-medium">
+                                <span class="material-symbols-outlined text-[18px]">filter_list</span> Filters
+                        </button>
+                </div>
+        </div>
+</div>
+<main class="max-w-[1440px] mx-auto px-6 py-8 flex gap-8">
+        <aside
+                class="hidden md:block w-72 shrink-0 space-y-8 custom-scrollbar overflow-y-auto sticky top-24 h-[calc(100vh-120px)] pr-2">
+                <section>
+                        <h3 class="font-bold mb-4">Price Range</h3>
+                        <div class="space-y-4">
+                                <div class="relative h-1.5 bg-slate-200 rounded-full">
+                                        <div class="absolute left-1/4 right-1/4 h-full bg-primary rounded-full"></div>
+                                        <div
+                                                class="absolute left-1/4 top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-primary rounded-full shadow-md cursor-pointer">
+                                        </div>
+                                        <div
+                                                class="absolute right-1/4 top-1/2 -translate-y-1/2 w-4 h-4 bg-white border-2 border-primary rounded-full shadow-md cursor-pointer">
+                                        </div>
+                                </div>
+                                <div class="flex items-center justify-between gap-4">
+                                        <div
+                                                class="flex-1 p-2 bg-slate-50 border border-slate-200 rounded-lg text-center">
+                                                <span class="text-xs text-slate-500 block">Min</span>
+                                                <span class="font-medium">$80</span>
+                                        </div>
+                                        <div
+                                                class="flex-1 p-2 bg-slate-50 border border-slate-200 rounded-lg text-center">
+                                                <span class="text-xs text-slate-500 block">Max</span>
+                                                <span class="font-medium">$450</span>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+                <section>
+                        <h3 class="font-bold mb-4">Property Type</h3>
+                        <div class="space-y-3">
+                                <label class="flex items-center justify-between group cursor-pointer">
+                                        <div class="flex items-center gap-3">
+                                                <input checked=""
+                                                        class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                        type="checkbox" />
+                                                <span
+                                                        class="text-slate-700 group-hover:text-primary transition-colors">Hotels</span>
+                                        </div>
+                                        <span class="text-xs text-slate-400">124</span>
+                                </label>
+                                <label class="flex items-center justify-between group cursor-pointer">
+                                        <div class="flex items-center gap-3">
+                                                <input class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                        type="checkbox" />
+                                                <span
+                                                        class="text-slate-700 group-hover:text-primary transition-colors">Apartments</span>
+                                        </div>
+                                        <span class="text-xs text-slate-400">82</span>
+                                </label>
+                                <label class="flex items-center justify-between group cursor-pointer">
+                                        <div class="flex items-center gap-3">
+                                                <input class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                        type="checkbox" />
+                                                <span
+                                                        class="text-slate-700 group-hover:text-primary transition-colors">Villas</span>
+                                        </div>
+                                        <span class="text-xs text-slate-400">45</span>
+                                </label>
+                                <label class="flex items-center justify-between group cursor-pointer">
+                                        <div class="flex items-center gap-3">
+                                                <input class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                        type="checkbox" />
+                                                <span
+                                                        class="text-slate-700 group-hover:text-primary transition-colors">Boutique</span>
+                                        </div>
+                                        <span class="text-xs text-slate-400">12</span>
+                                </label>
+                        </div>
+                </section>
+                <section>
+                        <h3 class="font-bold mb-4">Amenities</h3>
+                        <div class="space-y-3">
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                        <input class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                type="checkbox" />
+                                        <span class="text-slate-700 group-hover:text-primary transition-colors">Free
+                                                WiFi</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                        <input checked=""
+                                                class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                type="checkbox" />
+                                        <span class="text-slate-700 group-hover:text-primary transition-colors">Swimming
+                                                Pool</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                        <input class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                type="checkbox" />
+                                        <span
+                                                class="text-slate-700 group-hover:text-primary transition-colors">Gym</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                        <input class="rounded border-slate-300 text-primary focus:ring-primary"
+                                                type="checkbox" />
+                                        <span
+                                                class="text-slate-700 group-hover:text-primary transition-colors">Parking</span>
+                                </label>
+                        </div>
+                </section>
+                <section>
+                        <h3 class="font-bold mb-4">Guest Rating</h3>
+                        <div class="space-y-2">
+                                <button
+                                        class="w-full text-left px-3 py-2 rounded-lg bg-primary/10 text-primary flex items-center gap-2 text-sm font-medium border border-primary/20">
+                                        <span class="material-symbols-outlined text-[18px] fill-icon">star</span> 4.5
+                                        &amp; up
+                                </button>
+                                <button
+                                        class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-600 flex items-center gap-2 text-sm transition-colors">
+                                        <span class="material-symbols-outlined text-[18px] fill-icon">star</span> 4.0
+                                        &amp; up
+                                </button>
+                                <button
+                                        class="w-full text-left px-3 py-2 rounded-lg hover:bg-slate-100 text-slate-600 flex items-center gap-2 text-sm transition-colors">
+                                        <span class="material-symbols-outlined text-[18px] fill-icon">star</span> 3.5
+                                        &amp; up
+                                </button>
+                        </div>
+                </section>
+        </aside>
+        <div class="flex-1">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="group cursor-pointer">
+                                <div class="relative rounded-2xl overflow-hidden mb-3">
+                                        <img alt="Azure Luxury Villa"
+                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNqZHGvr0sskvKclWwW4XZ25weBdEuKFR4S6cru6LD5nlDqmGxXBHq4M_1jHuADUFl2-pgjwn-C_Ew38M-qbkS-Fk77DEfyFj1NyrCZew9H0IVda_u90MqEm2PJySdf3z30PdkGcrvVW9sTsOF-EoX7SMDLKMV-m1dkXj2eU4GQ-NTtN0UKT6gFKQzTBK7mHBtMfRQcMaxtCbmNmz6T7w9Wbc84eU5_yptTq8X6NcogZNUJp_3eLso9VfvSwdR51D497i-G9tR9WQB" />
+                                        <button
+                                                class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+                                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                        </button>
+                                        <div
+                                                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1">
+                                                <span
+                                                        class="material-symbols-outlined text-yellow-500 text-[16px] fill-icon">star</span>
+                                                <span class="text-xs font-bold">4.92</span>
+                                                <span class="text-[10px] text-slate-500">(128)</span>
+                                        </div>
+                                </div>
+                                <div class="space-y-1">
+                                        <div class="flex items-center justify-between">
+                                                <h3
+                                                        class="font-bold text-lg leading-tight group-hover:text-primary transition-colors">
+                                                        Azure Luxury Villa</h3>
+                                                <div class="text-primary font-bold">$340 <span
+                                                                class="text-sm font-normal text-slate-500">/night</span>
+                                                </div>
+                                        </div>
+                                        <p class="text-sm text-slate-500 flex items-center gap-1">
+                                                <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                                Oia, Santorini
+                                        </p>
+                                        <div class="pt-2 flex flex-wrap gap-2">
+                                                <span
+                                                        class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 bg-slate-100 rounded">Private
+                                                        Pool</span>
+                                                <span
+                                                        class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 bg-slate-100 rounded">Sea
+                                                        View</span>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="group cursor-pointer">
+                                <div class="relative rounded-2xl overflow-hidden mb-3">
+                                        <img alt="Caldera Edge Suites"
+                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9SnpV2Wo4eSPEewTkfRPVE-Kz-bYzaX9qoA-8dOz_mCjaUrIyBDSTPOS7C690f8PuaFsbDLU7g8zRcSW4iNU89ojjCuOjAwsa5kIm3o3NBTeNdzsqXk1t_ILtL4cMlyYUZLz9QPikik5HLFaM3kZPXXzqT62TCpBw3_h34NBzKpGtSM-4wBobwVjib0PbHeC1gYXCo-lL-W36IjQwBBiNBC6EtYnvIIOE8X3CteYdsO2J0SVIzy0NaitcyVTkCQMcJ8d-B5KMXt8g" />
+                                        <button
+                                                class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+                                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                        </button>
+                                        <div
+                                                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1">
+                                                <span
+                                                        class="material-symbols-outlined text-yellow-500 text-[16px] fill-icon">star</span>
+                                                <span class="text-xs font-bold">4.85</span>
+                                                <span class="text-[10px] text-slate-500">(215)</span>
+                                        </div>
+                                </div>
+                                <div class="space-y-1">
+                                        <div class="flex items-center justify-between">
+                                                <h3
+                                                        class="font-bold text-lg leading-tight group-hover:text-primary transition-colors">
+                                                        Caldera Edge Suites</h3>
+                                                <div class="text-primary font-bold">$210 <span
+                                                                class="text-sm font-normal text-slate-500">/night</span>
+                                                </div>
+                                        </div>
+                                        <p class="text-sm text-slate-500 flex items-center gap-1">
+                                                <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                                Fira, Santorini
+                                        </p>
+                                        <div class="pt-2 flex flex-wrap gap-2">
+                                                <span
+                                                        class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 bg-slate-100 rounded">Free
+                                                        WiFi</span>
+                                                <span
+                                                        class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 bg-slate-100 rounded">Spa</span>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="group cursor-pointer">
+                                <div class="relative rounded-2xl overflow-hidden mb-3">
+                                        <img alt="Santorini Sunsets"
+                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc8SvgYoLKEFZFlxymIGZ45OJJk5kCGUv_iyEz_i6JLKMbmolrTsdPFuZkJ_7BiXLuuJvlAjy4GAc60DpK5lYLjgk1-ESoUAW0PcvNko_4BL5SF8SQxTRUySyYlTdy3k3lluYpj7MzITVeyAd_T3AeK0esY05Qxca4qppxdC60obUMT4B5DtPbJtJhY1Nt9OZiC--WITteNeuLi1gYSkLV4H7XS3u-iS1AspIhRsFrgLoaFfAhMOVMG7JDhADBze2MtHLpLJUlDOI8" />
+                                        <button
+                                                class="absolute top-3 right-3 p-2 bg-primary/80 backdrop-blur-md rounded-full text-white transition-colors">
+                                                <span
+                                                        class="material-symbols-outlined text-[20px] fill-icon">favorite</span>
+                                        </button>
+                                        <div
+                                                class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-1 rounded-full uppercase tracking-widest shadow-lg">
+                                                Guest Favorite</div>
+                                        <div
+                                                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1">
+                                                <span
+                                                        class="material-symbols-outlined text-yellow-500 text-[16px] fill-icon">star</span>
+                                                <span class="text-xs font-bold">5.0</span>
+                                                <span class="text-[10px] text-slate-500">(84)</span>
+                                        </div>
+                                </div>
+                                <div class="space-y-1">
+                                        <div class="flex items-center justify-between">
+                                                <h3
+                                                        class="font-bold text-lg leading-tight group-hover:text-primary transition-colors">
+                                                        Santorini Sunsets</h3>
+                                                <div class="text-primary font-bold">$425 <span
+                                                                class="text-sm font-normal text-slate-500">/night</span>
+                                                </div>
+                                        </div>
+                                        <p class="text-sm text-slate-500 flex items-center gap-1">
+                                                <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                                Imerovigli, Santorini
+                                        </p>
+                                        <div class="pt-2 flex flex-wrap gap-2">
+                                                <span
+                                                        class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 bg-primary/10 text-primary rounded">Best
+                                                        Value</span>
+                                                <span
+                                                        class="text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 bg-slate-100 rounded">Infinity
+                                                        Pool</span>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="group cursor-pointer">
+                                <div class="relative rounded-2xl overflow-hidden mb-3">
+                                        <img alt="Blue Dome Boutique"
+                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1dDC2tIS9W-SNPCYnBp2ZzO0QVnmkTkX__1sek6u1A8mYeShkgrFEvSqVUvDsrVk9NZwvRR4ASnqZYmq4zjGzXFVn7Bbedf_FDI553NkwlnQhwjfUvgcc3j-DTL9jBTEi_VxDPo-x_jAWmCPYMUjjniTpoCofVDwBkRuW50TUl52hvb0LFr7E1kzF7lJFxfCopb_0RbON6IlJaWmgq-EQ3P18MuixHBBfHklKW7m3FrvfkG0HEt6a7XzSY_A4BzTh5cQi-d5s6pLp" />
+                                        <button
+                                                class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+                                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                        </button>
+                                        <div
+                                                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1">
+                                                <span
+                                                        class="material-symbols-outlined text-yellow-500 text-[16px] fill-icon">star</span>
+                                                <span class="text-xs font-bold">4.78</span>
+                                                <span class="text-[10px] text-slate-500">(92)</span>
+                                        </div>
+                                </div>
+                                <div class="space-y-1">
+                                        <div class="flex items-center justify-between">
+                                                <h3
+                                                        class="font-bold text-lg leading-tight group-hover:text-primary transition-colors">
+                                                        Blue Dome Boutique</h3>
+                                                <div class="text-primary font-bold">$185 <span
+                                                                class="text-sm font-normal text-slate-500">/night</span>
+                                                </div>
+                                        </div>
+                                        <p class="text-sm text-slate-500 flex items-center gap-1">
+                                                <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                                Akrotiri, Santorini
+                                        </p>
+                                </div>
+                        </div>
+                        <div class="group cursor-pointer">
+                                <div class="relative rounded-2xl overflow-hidden mb-3">
+                                        <img alt="Mystique Retreat"
+                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEx2mJSre3Lqm-TS0mAJhmWl8aR-YF21nmBjXu6CU1-blNR9zHfaC8vZ6Rx4-0FrTOhkn0VL1Coza6X2xEkHWFET9L9ED-dISUeuAL1Pb3JtXctRh5tQo8H6XUUHLObTt62JT6xznQxrG7KCmGC86TgV1cspK3FdGO2QnaiJvO-aB5e5f0xQiKOgHl3jNc-LFHOgwTjMOJ4qZVKLOGnDHJ-UALpLjG6X_dUovxjON4ntkrZDY7IbLRgeQmLSWrf-9-CXBmdm_C4hHN" />
+                                        <button
+                                                class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+                                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                        </button>
+                                        <div
+                                                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1">
+                                                <span
+                                                        class="material-symbols-outlined text-yellow-500 text-[16px] fill-icon">star</span>
+                                                <span class="text-xs font-bold">4.90</span>
+                                                <span class="text-[10px] text-slate-500">(312)</span>
+                                        </div>
+                                </div>
+                                <div class="space-y-1">
+                                        <div class="flex items-center justify-between">
+                                                <h3
+                                                        class="font-bold text-lg leading-tight group-hover:text-primary transition-colors">
+                                                        Mystique Retreat</h3>
+                                                <div class="text-primary font-bold">$295 <span
+                                                                class="text-sm font-normal text-slate-500">/night</span>
+                                                </div>
+                                        </div>
+                                        <p class="text-sm text-slate-500 flex items-center gap-1">
+                                                <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                                Pyrgos, Santorini
+                                        </p>
+                                </div>
+                        </div>
+                        <div class="group cursor-pointer">
+                                <div class="relative  rounded-2xl overflow-hidden mb-3">
+                                        <img alt="Aegean Breeze"
+                                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKo0C_5sPlUPR7fFStHphbp4hIrSdQ2sChkwKjJLIK8YLWl0Z_8LFbWaJXCBBeMUst-QE95uvpYLx_POnTNK4rs7eLeZNkeEdRDl7Pf4JLiozUfslTg_DAJC4rK7P5IfLMAPfgQdTKSdDB7TPVjHamAp86AWi0g1cKmniLCpXf_s4aitg5K0UYqJzCYpVCoPwxzVKjYXKLpyTocWgngNyPT_5n0kqKOl_0jgAbZ3eg-oNE1orkznCVP5oLn0pEoGzL601qTXyU6YoI" />
+                                        <button
+                                                class="absolute top-3 right-3 p-2 bg-white/20 hover:bg-white/40 backdrop-blur-md rounded-full text-white transition-colors">
+                                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                                        </button>
+                                        <div
+                                                class="absolute bottom-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center gap-1">
+                                                <span
+                                                        class="material-symbols-outlined text-yellow-500 text-[16px] fill-icon">star</span>
+                                                <span class="text-xs font-bold">4.65</span>
+                                                <span class="text-[10px] text-slate-500">(56)</span>
+                                        </div>
+                                </div>
+                                <div class="space-y-1">
+                                        <div class="flex items-center justify-between">
+                                                <h3
+                                                        class="font-bold text-lg leading-tight group-hover:text-primary transition-colors">
+                                                        Aegean Breeze</h3>
+                                                <div class="text-primary font-bold">$160 <span
+                                                                class="text-sm font-normal text-slate-500">/night</span>
+                                                </div>
+                                        </div>
+                                        <p class="text-sm text-slate-500 flex items-center gap-1">
+                                                <span class="material-symbols-outlined text-[16px]">location_on</span>
+                                                Kamari, Santorini
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+                <div class="mt-12 flex flex-col items-center gap-6">
+                        <button
+                                class="px-8 py-3 bg-primary text-white font-bold rounded-xl hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20">
+                                Show more results
+                        </button>
+                        <div class="flex items-center gap-4 text-sm text-slate-500">
+                                <span>1 - 6 of 328 properties</span>
+                                <div class="flex items-center gap-2">
+                                        <button class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 hover:bg-slate-50 disabled:opacity-50"
+                                                disabled="">
+                                                <span class="material-symbols-outlined text-[18px]">chevron_left</span>
+                                        </button>
+                                        <button
+                                                class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-200 hover:bg-slate-50">
+                                                <span class="material-symbols-outlined text-[18px]">chevron_right</span>
+                                        </button>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</main>
+<div class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50">
+        <button class="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white rounded-full font-bold shadow-2xl">
+                <span class="material-symbols-outlined text-[20px]">map</span> Show Map
+        </button>
+</div>

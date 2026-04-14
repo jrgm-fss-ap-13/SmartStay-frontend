@@ -1,0 +1,482 @@
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-2 text-primary">
+                    <span class="material-symbols-outlined text-3xl font-bold">travel_explore</span>
+                    <h1 class="text-xl font-extrabold tracking-tight text-slate-900">SmartStay <span
+                            class="text-primary/80 font-medium text-lg">Host</span></h1>
+                </div>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
+                        href="#">Dashboard</a>
+                    <a class="text-sm font-semibold text-primary" href="#">Listings</a>
+                    <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
+                        href="#">Bookings</a>
+                    <a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors"
+                        href="#">Inbox</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="p-2 text-slate-500 hover:bg-slate-100 rounded-lg transition-colors relative">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+                </button>
+                <div
+                    class="h-8 w-8 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center overflow-hidden">
+                    <img alt="User profile" class="w-full h-full object-cover"
+                        data-alt="Profile picture of a smiling male host"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTDiGG0KCAgs1zdgOAnlYLZJlfKwheNNE507yNR5Uyqr9zgffuv77kxHRibRxBl9AxoiCiz4BKhdbpUP6DHtq6cPQlK3P7hBTfwOHjPuesk2Nbv_GRIrop0YYX1U5-x3pvPmoLe8CcioH7EJLhd3Yh90o5t7da90CCH18C1Pzzm5uEwwkHQGA4r28RidNwJFndeFiV_DmoPKrYbmp8DGCLNKzaIJTJKc3O3l2mUzzijmYz9Lk3xi9FHEaYdGRUQgcR8_yzxS9Z7aUx" />
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="max-w-5xl mx-auto px-4 py-8">
+    <!-- Breadcrumbs & Title -->
+    <div class="mb-8">
+        <nav class="flex items-center gap-2 text-sm text-slate-500 mb-4">
+            <a class="hover:text-primary" href="#">Host Dashboard</a>
+            <span class="material-symbols-outlined text-xs">chevron_right</span>
+            <span class="font-medium text-slate-900">Create New Listing</span>
+        </nav>
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+            <div>
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Create New Listing</h2>
+                <p class="text-slate-500 mt-1">Fill in the details below to reach thousands of travelers.</p>
+            </div>
+            <div class="flex items-center gap-2 px-4 py-2 bg-white rounded-lg shadow-sm border border-slate-200">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Progress</span>
+                <div class="w-32 h-2 bg-slate-100 rounded-full overflow-hidden">
+                    <div class="bg-primary h-full w-1/6"></div>
+                </div>
+                <span class="text-sm font-bold text-primary">1/6</span>
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Sidebar Navigation -->
+        <aside class="lg:col-span-3 space-y-1">
+            <nav class="sticky top-24">
+                <button
+                    class="w-full flex items-center gap-3 px-4 py-3 text-left rounded-lg bg-primary/10 text-primary font-bold">
+                    <span class="material-symbols-outlined text-xl">info</span>
+                    <span class="text-sm">Basic Information</span>
+                </button>
+                <button
+                    class="w-full flex items-center gap-3 px-4 py-3 text-left rounded-lg text-slate-500 hover:bg-slate-100 transition-colors">
+                    <span class="material-symbols-outlined text-xl">location_on</span>
+                    <span class="text-sm font-medium">Location</span>
+                </button>
+                <button
+                    class="w-full flex items-center gap-3 px-4 py-3 text-left rounded-lg text-slate-500 hover:bg-slate-100 transition-colors">
+                    <span class="material-symbols-outlined text-xl">home_work</span>
+                    <span class="text-sm font-medium">Property Details</span>
+                </button>
+                <button
+                    class="w-full flex items-center gap-3 px-4 py-3 text-left rounded-lg text-slate-500 hover:bg-slate-100 transition-colors">
+                    <span class="material-symbols-outlined text-xl">check_box</span>
+                    <span class="text-sm font-medium">Amenities</span>
+                </button>
+                <button
+                    class="w-full flex items-center gap-3 px-4 py-3 text-left rounded-lg text-slate-500 hover:bg-slate-100 transition-colors">
+                    <span class="material-symbols-outlined text-xl">photo_library</span>
+                    <span class="text-sm font-medium">Photos</span>
+                </button>
+                <button
+                    class="w-full flex items-center gap-3 px-4 py-3 text-left rounded-lg text-slate-500 hover:bg-slate-100 transition-colors">
+                    <span class="material-symbols-outlined text-xl">payments</span>
+                    <span class="text-sm font-medium">Pricing</span>
+                </button>
+            </nav>
+        </aside>
+        <!-- Main Form Area -->
+        <div class="lg:col-span-9 space-y-8 pb-24">
+            <!-- Step 1: Basic Information -->
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm" id="basic-info">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <span
+                        class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm">1</span>
+                    Basic Information
+                </h3>
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Property
+                            Title</label>
+                        <input
+                            class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                            placeholder="e.g. Modern Beachfront Villa with Private Pool" type="text" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-4">Select
+                            Category</label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <button
+                                class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border-2 border-primary bg-primary/5 text-primary">
+                                <span class="material-symbols-outlined text-3xl">beach_access</span>
+                                <span class="text-xs font-bold">Beach</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border-2 border-slate-100 hover:border-primary/50 transition-colors">
+                                <span class="material-symbols-outlined text-3xl text-slate-400">terrain</span>
+                                <span class="text-xs font-bold text-slate-600">Mountain</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border-2 border-slate-100 hover:border-primary/50 transition-colors">
+                                <span class="material-symbols-outlined text-3xl text-slate-400">apartment</span>
+                                <span class="text-xs font-bold text-slate-600">City</span>
+                            </button>
+                            <button
+                                class="flex flex-col items-center justify-center gap-2 p-4 rounded-xl border-2 border-slate-100 hover:border-primary/50 transition-colors">
+                                <span class="material-symbols-outlined text-3xl text-slate-400">cottage</span>
+                                <span class="text-xs font-bold text-slate-600">Cabin</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-2">Description</label>
+                        <div class="rounded-lg border border-slate-200 overflow-hidden">
+                            <div class="bg-slate-50 border-b border-slate-200 p-2 flex gap-2">
+                                <button class="p-1 hover:bg-slate-200 rounded"><span
+                                        class="material-symbols-outlined text-xl">format_bold</span></button>
+                                <button class="p-1 hover:bg-slate-200 rounded"><span
+                                        class="material-symbols-outlined text-xl">format_italic</span></button>
+                                <button class="p-1 hover:bg-slate-200 rounded"><span
+                                        class="material-symbols-outlined text-xl">format_list_bulleted</span></button>
+                                <button class="p-1 hover:bg-slate-200 rounded"><span
+                                        class="material-symbols-outlined text-xl">link</span></button>
+                            </div>
+                            <textarea class="w-full p-4 border-none focus:ring-0 text-slate-600"
+                                placeholder="Tell travelers what makes your place special..." rows="6"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Step 2: Location -->
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm" id="location">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <span
+                        class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm">2</span>
+                    Location
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Street
+                                Address</label>
+                            <input
+                                class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                                placeholder="123 Ocean Drive" type="text" />
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">City</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                                    placeholder="Miami" type="text" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-slate-700 mb-2">Zip
+                                    Code</label>
+                                <input
+                                    class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                                    placeholder="33101" type="text" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Country</label>
+                            <select
+                                class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary transition-all">
+                                <option>United States</option>
+                                <option>Canada</option>
+                                <option>Mexico</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="relative group h-full min-h-[240px]">
+                        <div class="absolute inset-0 bg-slate-200 rounded-xl overflow-hidden">
+                            <img alt="Map" class="w-full h-full object-cover grayscale opacity-50"
+                                data-alt="Stylized map showing coastal area with pin" data-location="Miami, FL"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAYXMFI0bLvZXwq7IkwL-xW0C14fh2QMM_qPRXyPshlimez4V_SKSW5AD0eE-fn2jMSDJ9OmZ0021eg_AM8GHzxwz710SUDoCIVRMgLSAWzuDS6zNRqbujK_PfZI0H10wgSceIr0iF0kVM5CSRIrQqG9hQaksfYmjmu4wfVnVS1EFSVLkfcPRYKiWXASB_0d_IIFX_iq0XRr9eLxqIyWdxzNx4am2UAQmGWEH1EFMpxzfADEy32AXyY0yqCqfFt9cWH9w9icwTT2PY9" />
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div
+                                    class="bg-white p-3 rounded-xl shadow-xl border border-slate-200 flex flex-col items-center gap-2 animate-bounce">
+                                    <span
+                                        class="material-symbols-outlined text-primary text-3xl fill-1">location_on</span>
+                                    <span class="text-[10px] font-bold uppercase tracking-widest">Pin Location</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Step 3: Property Details -->
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm" id="details">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <span
+                        class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm">3</span>
+                    Property Details
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <div>
+                            <p class="text-sm font-bold text-slate-700">Bedrooms</p>
+                            <p class="text-xs text-slate-500">How many sleeping areas?</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button
+                                class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center hover:bg-white transition-colors"><span
+                                    class="material-symbols-outlined text-sm">remove</span></button>
+                            <span class="font-bold text-lg">2</span>
+                            <button
+                                class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center hover:bg-white transition-colors"><span
+                                    class="material-symbols-outlined text-sm">add</span></button>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <div>
+                            <p class="text-sm font-bold text-slate-700">Bathrooms</p>
+                            <p class="text-xs text-slate-500">Full and half baths</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button
+                                class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center hover:bg-white transition-colors"><span
+                                    class="material-symbols-outlined text-sm">remove</span></button>
+                            <span class="font-bold text-lg">1</span>
+                            <button
+                                class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center hover:bg-white transition-colors"><span
+                                    class="material-symbols-outlined text-sm">add</span></button>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between p-4 bg-slate-50 rounded-xl border border-slate-100">
+                        <div>
+                            <p class="text-sm font-bold text-slate-700">Max Guests</p>
+                            <p class="text-xs text-slate-500">Total capacity</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <button
+                                class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center hover:bg-white transition-colors"><span
+                                    class="material-symbols-outlined text-sm">remove</span></button>
+                            <span class="font-bold text-lg">4</span>
+                            <button
+                                class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center hover:bg-white transition-colors"><span
+                                    class="material-symbols-outlined text-sm">add</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Step 4: Amenities -->
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm" id="amenities">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <span
+                        class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm">4</span>
+                    Amenities
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <label
+                        class="relative flex items-center gap-3 p-4 rounded-xl border-2 border-primary bg-primary/5 cursor-pointer transition-all">
+                        <input checked="" class="hidden" type="checkbox" />
+                        <span class="material-symbols-outlined text-primary">wifi</span>
+                        <span class="text-sm font-semibold text-slate-900">Free WiFi</span>
+                        <span
+                            class="absolute top-2 right-2 material-symbols-outlined text-primary text-lg">check_circle</span>
+                    </label>
+                    <label
+                        class="relative flex items-center gap-3 p-4 rounded-xl border-2 border-slate-100 hover:border-slate-200 cursor-pointer transition-all">
+                        <input class="hidden" type="checkbox" />
+                        <span class="material-symbols-outlined text-slate-400">countertops</span>
+                        <span class="text-sm font-semibold text-slate-600">Kitchen</span>
+                    </label>
+                    <label
+                        class="relative flex items-center gap-3 p-4 rounded-xl border-2 border-slate-100 hover:border-slate-200 cursor-pointer transition-all">
+                        <input class="hidden" type="checkbox" />
+                        <span class="material-symbols-outlined text-slate-400">pool</span>
+                        <span class="text-sm font-semibold text-slate-600">Pool</span>
+                    </label>
+                    <label
+                        class="relative flex items-center gap-3 p-4 rounded-xl border-2 border-slate-100 hover:border-slate-200 cursor-pointer transition-all">
+                        <input class="hidden" type="checkbox" />
+                        <span class="material-symbols-outlined text-slate-400">ac_unit</span>
+                        <span class="text-sm font-semibold text-slate-600">AC</span>
+                    </label>
+                    <label
+                        class="relative flex items-center gap-3 p-4 rounded-xl border-2 border-slate-100 hover:border-slate-200 cursor-pointer transition-all">
+                        <input class="hidden" type="checkbox" />
+                        <span class="material-symbols-outlined text-slate-400">tv</span>
+                        <span class="text-sm font-semibold text-slate-600">TV</span>
+                    </label>
+                    <label
+                        class="relative flex items-center gap-3 p-4 rounded-xl border-2 border-slate-100 hover:border-slate-200 cursor-pointer transition-all">
+                        <input class="hidden" type="checkbox" />
+                        <span class="material-symbols-outlined text-slate-400">local_parking</span>
+                        <span class="text-sm font-semibold text-slate-600">Parking</span>
+                    </label>
+                    <label
+                        class="relative flex items-center gap-3 p-4 rounded-xl border-2 border-slate-100 hover:border-slate-200 cursor-pointer transition-all">
+                        <input class="hidden" type="checkbox" />
+                        <span class="material-symbols-outlined text-slate-400">local_laundry_service</span>
+                        <span class="text-sm font-semibold text-slate-600">Laundry</span>
+                    </label>
+                    <label
+                        class="relative flex items-center gap-3 p-4 rounded-xl border-2 border-slate-100 hover:border-slate-200 cursor-pointer transition-all">
+                        <input class="hidden" type="checkbox" />
+                        <span class="material-symbols-outlined text-slate-400">fitness_center</span>
+                        <span class="text-sm font-semibold text-slate-600">Gym</span>
+                    </label>
+                </div>
+            </section>
+            <!-- Step 5: Photos -->
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm" id="photos">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <span
+                        class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm">5</span>
+                    Photos
+                </h3>
+                <div
+                    class="border-2 border-dashed border-slate-200 rounded-xl p-12 flex flex-col items-center justify-center bg-slate-50 hover:bg-primary/5 hover:border-primary/50 transition-all cursor-pointer">
+                    <div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                        <span class="material-symbols-outlined text-primary text-3xl">add_a_photo</span>
+                    </div>
+                    <h4 class="text-lg font-bold text-slate-900 mb-2">Drag and drop your photos here
+                    </h4>
+                    <p class="text-sm text-slate-500 mb-6">Upload at least 5 high-quality images of your property</p>
+                    <button
+                        class="px-6 py-2.5 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 shadow-lg shadow-primary/20 transition-all">Select
+                        Photos</button>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                    <div
+                        class="aspect-square rounded-lg bg-slate-200 flex items-center justify-center relative group overflow-hidden">
+                        <img alt="Beach house" class="w-full h-full object-cover"
+                            data-alt="Modern house exterior at sunset on a beach"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ4A2Q_82UV2XimWR70EwZxpGgb1NUYW03g37G542cOZfDzLRtjnKFhiJxiIqMiB8juJO5i28U_CH6lAZ-O2heCdhvI2WJUe3Vx7V_URumqv1b9kvNmauMKe84Am2h7CL36PNvEQYgeTIAJZ-1qtsT1MXICPhQ-AEWNfHdJTQFT3tWB322GzDd4gtE6UBG9NFCcTiLJeHHvrVZJzRi5mmAoHLKCLaPTThMetx_uuG1O2O55SOzRCS7iTwlkTTCJUijqREwPyGoTDIK" />
+                        <div
+                            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button class="bg-white text-slate-900 p-1.5 rounded-full"><span
+                                    class="material-symbols-outlined text-sm">delete</span></button>
+                        </div>
+                    </div>
+                    <div
+                        class="aspect-square rounded-lg bg-slate-100 border-2 border-dashed border-slate-200 flex items-center justify-center text-slate-400">
+                        <span class="material-symbols-outlined">add</span>
+                    </div>
+                </div>
+            </section>
+            <!-- Step 6: Pricing & Availability -->
+            <section class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm" id="pricing">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <span
+                        class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center text-sm">6</span>
+                    Pricing &amp; Availability
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Price per
+                                Night</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold">$</span>
+                                <input
+                                    class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary transition-all font-bold"
+                                    type="number" value="120" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700 mb-2">Cleaning
+                                Fee</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 font-bold">$</span>
+                                <input
+                                    class="w-full pl-10 pr-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-primary focus:border-primary transition-all"
+                                    type="number" value="45" />
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-slate-50  p-4 rounded-xl border border-slate-100">
+                        <div class="flex items-center justify-between mb-4">
+                            <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400">Availability Preview
+                            </h4>
+                            <span class="text-xs font-semibold text-primary">October 2023</span>
+                        </div>
+                        <div class="grid grid-cols-7 gap-1 text-center mb-2">
+                            <div class="text-[10px] font-bold text-slate-400">S</div>
+                            <div class="text-[10px] font-bold text-slate-400">M</div>
+                            <div class="text-[10px] font-bold text-slate-400">T</div>
+                            <div class="text-[10px] font-bold text-slate-400">W</div>
+                            <div class="text-[10px] font-bold text-slate-400">T</div>
+                            <div class="text-[10px] font-bold text-slate-400">F</div>
+                            <div class="text-[10px] font-bold text-slate-400">S</div>
+                        </div>
+                        <div class="grid grid-cols-7 gap-1">
+                            <div class="h-8 flex items-center justify-center text-xs text-slate-300">24</div>
+                            <div class="h-8 flex items-center justify-center text-xs text-slate-300">25</div>
+                            <div class="h-8 flex items-center justify-center text-xs text-slate-300">26</div>
+                            <div class="h-8 flex items-center justify-center text-xs text-slate-300">27</div>
+                            <div class="h-8 flex items-center justify-center text-xs text-slate-300">28</div>
+                            <div class="h-8 flex items-center justify-center text-xs text-slate-300">29</div>
+                            <div
+                                class="h-8 flex items-center justify-center text-xs font-bold bg-primary text-white rounded-md">
+                                1</div>
+                            <div
+                                class="h-8 flex items-center justify-center text-xs font-bold bg-primary text-white rounded-md">
+                                2</div>
+                            <div
+                                class="h-8 flex items-center justify-center text-xs font-bold bg-primary text-white rounded-md">
+                                3</div>
+                            <div class="h-8 flex items-center justify-center text-xs font-bold">4</div>
+                            <div class="h-8 flex items-center justify-center text-xs font-bold">5</div>
+                            <div class="h-8 flex items-center justify-center text-xs font-bold">6</div>
+                            <div class="h-8 flex items-center justify-center text-xs font-bold">7</div>
+                            <div class="h-8 flex items-center justify-center text-xs font-bold">8</div>
+                            <div class="h-8 flex items-center justify-center text-xs font-bold">9</div>
+                            <div class="h-8 flex items-center justify-center text-xs font-bold">10</div>
+                            <div
+                                class="h-8 flex items-center justify-center text-xs font-bold bg-slate-200 text-slate-400 line-through rounded-md">
+                                11</div>
+                            <div
+                                class="h-8 flex items-center justify-center text-xs font-bold bg-slate-200 text-slate-400 line-through rounded-md">
+                                12</div>
+                            <div class="h-8 flex items-center justify-center text-xs font-bold">13</div>
+                            <div class="h-8 flex items-center justify-center text-xs font-bold">14</div>
+                            <div class="h-8 flex items-center justify-center text-xs font-bold">15</div>
+                        </div>
+                        <button class="w-full mt-4 text-xs font-bold text-primary hover:underline">Full Calendar
+                            Settings</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</main>
+<!-- Sticky Footer Actions -->
+<footer class="fixed bottom-0 left-0 right-0 bg-white border-t border-slate-200 p-4 shadow-2xl z-50">
+    <div class="max-w-5xl mx-auto flex items-center justify-between gap-4">
+        <button class="flex items-center gap-2 px-6 py-3 font-bold text-slate-600 hover:text-slate-900 transition-all">
+            <span class="material-symbols-outlined text-xl">save</span>
+            Save as Draft
+        </button>
+        <div class="flex items-center gap-3">
+            <button
+                class="px-8 py-3 font-bold text-slate-700 border border-slate-200 rounded-lg hover:bg-slate-50 transition-all">
+                Previous
+            </button>
+            <button
+                class="px-8 py-3 bg-primary text-white font-extrabold rounded-lg hover:bg-primary/90 shadow-xl shadow-primary/30 transition-all">
+                Publish Listing
+            </button>
+        </div>
+    </div>
+</footer>
+<!-- Saved Notification (Floating Toast) -->
+<div
+    class="fixed top-20 right-8 bg-slate-900 text-white px-4 py-3 rounded-xl shadow-2xl flex items-center gap-3 border border-white/10 animate-pulse">
+    <div class="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center">
+        <span class="material-symbols-outlined text-xs">check</span>
+    </div>
+    <div class="flex flex-col">
+        <p class="text-xs font-bold">Draft Auto-Saved</p>
+        <p class="text-[10px] text-slate-400">Just now</p>
+    </div>
+</div>

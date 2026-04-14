@@ -1,0 +1,21 @@
+<section class="py-8 px-4 bg-white">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-950 ">Recommended for You</h2>
+            </div>
+            <a class="text-primary font-bold flex items-center gap-1 hover:underline" href="#">
+                See all matches
+                <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            @for (listing of listings_list(); track listing.id) {
+
+
+            <app-listing-card [listing]="listing"></app-listing-card>
+            
+        }
+        </div>
+    </div>
+</section>

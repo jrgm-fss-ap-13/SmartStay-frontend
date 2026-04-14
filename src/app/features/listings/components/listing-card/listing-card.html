@@ -1,1 +1,29 @@
-<p>listing-card works!</p>,
+ <a [routerLink]="['/rooms', listing()?.id]"
+        class="group cursor-pointer block no-underline text-inherit">
+                <div class="relative aspect-4/3 rounded-3xl overflow-hidden mb-4 bg-slate-100">
+                    <img [alt]="listing()?.title ?? 'Listing'"
+                        class="absolute inset-0 size-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    [src]="listing()?.cover_image"/>
+                    <button type="button" (click)="$event.preventDefault(); $event.stopPropagation()"
+                        class="absolute top-4 right-4 p-2 text-white hover:bg-white/40 transition-colors">
+                        <span class="material-symbols-outlined">favorite</span>
+                    </button>
+                    <div class="absolute bottom-4 left-4">
+                        <span
+                            class="bg-blue-600 text-white text-[10px] font-bold px-2 py-1 rounded-md uppercase">98%
+                            Match</span>
+                    </div>
+                </div>
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 class="font-bold text-lg ">{{listing()?.title}}</h3>
+                        <p class="text-slate-500  text-sm">{{listing()?.city}}, {{listing()?.country}}</p>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <span class="material-symbols-outlined text-sm text-yellow-500">star</span>
+                        <span class="text-sm font-bold ">{{listing()?.rating}}</span>
+                    </div>
+                </div>
+                <p class="mt-2 font-bold ">{{listing()?.base_price}} <span
+                        class="text-sm font-normal text-slate-500 ">/ night</span></p>
+</a>

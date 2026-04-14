@@ -1,0 +1,64 @@
+<div class="relative">
+    <div class="sticky top-28 bg-white p-6 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50">
+        <div class="flex justify-between items-center mb-6">
+            <div>
+                <span class="text-2xl font-extrabold">${{ listing()?.base_price }}</span>
+                <span class="text-slate-500 font-medium"> / night</span>
+            </div>
+            <div class="flex items-center gap-1 text-sm font-semibold">
+                <span class="material-symbols-outlined text-primary text-base">star</span>
+                <span>{{ listing()?.rating }}</span>
+                <span class="text-slate-400 font-normal">· {{ listing()?.total_reviews }} reviews</span>
+            </div>
+        </div>
+        <div class="border border-slate-300 rounded-xl overflow-hidden mb-4">
+            <div class="grid grid-cols-2 border-b border-slate-300">
+                <div class="p-3 border-r border-slate-300 cursor-pointer hover:bg-slate-50">
+                    <label class="text-[10px] uppercase font-bold text-slate-500">Check-in</label>
+                    <div class="text-sm">May 12, 2024</div>
+                </div>
+                <div class="p-3 cursor-pointer hover:bg-slate-50">
+                    <label class="text-[10px] uppercase font-bold text-slate-500">Checkout</label>
+                    <div class="text-sm">May 17, 2024</div>
+                </div>
+            </div>
+            <div class="p-3 cursor-pointer hover:bg-slate-50">
+                <label class="text-[10px] uppercase font-bold text-slate-500">Guests</label>
+                <div class="text-sm">{{ listing()?.max_guests }} guests max</div>
+            </div>
+        </div>
+        <button type="button"
+            class="w-full py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-opacity-90 active:scale-[0.98] transition-all mb-4">
+            Reserve Now
+        </button>
+        <p class="text-center text-sm text-slate-500 mb-6">You won't be charged yet</p>
+        <div class="space-y-4 mb-6">
+            <div class="flex justify-between text-slate-600">
+                <span class="underline">${{ listing()?.base_price }} x {{ nights() }} nights</span>
+                <span>${{ subtotal().toFixed(2) }}</span>
+            </div>
+            <div class="flex justify-between text-slate-600">
+                <span class="underline">Cleaning fee</span>
+                <span>${{ cleaningAmount().toFixed(2) }}</span>
+            </div>
+            <div class="flex justify-between text-slate-600">
+                <span class="underline">SmartStay service fee ({{ listing()?.service_fee_percent }}%)</span>
+                <span>${{ serviceFeeAmount().toFixed(2) }}</span>
+            </div>
+        </div>
+        <div class="pt-6 border-t border-slate-200 flex justify-between font-bold text-lg">
+            <span>Total</span>
+            <span>${{ total().toFixed(2) }}</span>
+        </div>
+        <div
+            class="mt-6 flex items-center justify-center gap-2 p-3 bg-slate-50 rounded-xl border border-dashed border-slate-300">
+            <span class="material-symbols-outlined text-primary">verified_user</span>
+            <span class="text-xs font-semibold text-slate-600">Price Match Guarantee</span>
+        </div>
+    </div>
+    <button type="button"
+        class="w-full mt-6 text-slate-400 text-sm underline flex items-center justify-center gap-2 hover:text-slate-600">
+        <span class="material-symbols-outlined text-base">flag</span>
+        Report this listing
+    </button>
+</div>

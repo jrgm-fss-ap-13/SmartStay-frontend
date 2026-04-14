@@ -12,6 +12,11 @@ export const routes: Routes = [
         path: '',
         loadChildren: () =>
           import('./features/listings/listings.routes')
-      },
+    },
+    {
+        path: '**',
+        redirectTo: '',
+        pathMatch: 'full'
+    }
 
 ];

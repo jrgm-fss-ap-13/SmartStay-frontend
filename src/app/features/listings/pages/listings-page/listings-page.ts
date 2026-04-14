@@ -6,7 +6,7 @@ import { ListingFormIndex } from "../../components/listing-form-index/listing-fo
 
 @Component({
   selector: 'app-listings-page',
-  imports: [ListingPopularDestination, ListingRecommended, ListingPlaceCategory, ListingFormIndex],
+  imports: [],
   templateUrl: './listings-page.html',
   styleUrl: './listings-page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

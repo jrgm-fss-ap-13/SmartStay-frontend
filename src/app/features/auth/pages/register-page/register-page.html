@@ -11,7 +11,10 @@
       <h2 class="text-3xl font-bold text-black tracking-tight">Create an account</h2>
       <p class="text-[#547792] mt-2">Join the modern personalized travel platform.</p>
     </div>
-    <app-register-form></app-register-form>
+    <app-register-form
+    (submitRegister)="onRegister($event)"
+    [backendErrors]="backendErrors()"
+    ></app-register-form>
     <div class="relative py-2">
       <div aria-hidden="true" class="absolute inset-0 flex items-center">
         <div class="w-full border-t border-[#d2dde5]"></div>
@@ -21,13 +24,11 @@
       </div>
     </div>
     <app-social-buttons></app-social-buttons>
-    <!-- Footer Link -->
     <p class="text-center text-[#547792] text-sm">
       Already have an account? 
       <a class="text-primary font-bold hover:underline ml-1" routerLink="/login">Log In</a>
     </p>
   </div>
-  <!-- Language/Theme Selectors (Optional footer elements) -->
   <div class="mt-6 flex items-center gap-6 text-[#547792] text-xs font-medium">
     <a class="hover:text-primary" href="#">Help Center</a>
     <a class="hover:text-primary" href="#">Privacy</a>

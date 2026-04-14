@@ -1,33 +1,67 @@
-<nav
-        class="sticky top-0 z-50 bg-white  backdrop-blur-md border-b border-blue-100 ">
-        <div class="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-15">
-                <div class="flex items-center gap-2">
-                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
-                        <span class="material-symbols-outlined text-white">travel_explore</span>
-                    </div>
-                    <span class="text-2xl font-bold tracking-tight text-primary ">SmartStay</span>
+<nav class="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <div class="flex items-center gap-2">
+                <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white">
+                    <span class="material-symbols-outlined">home_work</span>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a class="text-primary  font-medium hover:text-primary transition-colors"
-                        href="#">Stays</a>
-                    <a class="text-primary  font-medium hover:text-primary transition-colors"
-                        href="#">Experiences</a>
-                    <a class="text-primary  font-medium hover:text-primary transition-colors"
-                        href="#">Trending</a>
-                </div>
-                <div class="flex items-center gap-4">
-                    <button class="p-2 rounded-full hover:bg-blue-100  transition-colors">
-                        <span class="material-symbols-outlined">dark_mode</span>
-                    </button>
-                    <div
-                        class="flex items-center gap-3 p-1.5 pl-4 border border-blue-200  rounded-full hover:shadow-md transition-shadow cursor-pointer bg-white">
-                        <span class="material-symbols-outlined">menu</span>
-                        <div class="w-8 h-8 rounded-full flex items-center justify-center">
-                            <span class="material-symbols-outlined">person</span>
-                        </div>
-                    </div>
+                <span class="text-2xl font-extrabold tracking-tight text-primary">SmartStay</span>
+            </div>
+            <div
+                class="hidden md:flex items-center bg-surface-light px-4 py-2 rounded-full border border-slate-200 shadow-sm">
+                <button class="px-4 py-1 text-sm font-semibold border-r border-slate-300">Anywhere</button>
+                <button class="px-4 py-1 text-sm font-semibold border-r border-slate-300">Any week</button>
+                <button class="px-4 py-1 text-sm text-slate-500">Add guests</button>
+                <div class="ml-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">
+                    <span class="material-symbols-outlined text-sm">search</span>
                 </div>
             </div>
+            <div class="flex items-center gap-4 relative">
+                <!-- <button class="p-2 rounded-full hover:bg-slate-100">
+                    <span class="material-symbols-outlined">dark_mode</span>
+                    <span class="material-symbols-outlined hidden text-yellow-400">light_mode</span>
+                </button> -->
+                <div (click)="toggleMenu()"
+                    class="flex items-center gap-3 border border-slate-200 px-3 py-1.5 rounded-full hover:shadow-md transition-shadow cursor-pointer">
+                    <span class="material-symbols-outlined">menu</span>
+                    <div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center overflow-hidden">
+                        @if (authService.authStatus() === 'authenticated') {
+                        <img alt="User avatar"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBw4mAokqrD64BWsWTG4VafzuwoiEsePYewjImABYw6uGovX9dDntNiaskaLdE34UXLhcxXKVri9fUjdace4EUafUjxgETp-KYV2sO8u90HMXaHO7MJcoDk3-ZgYhHynK7kGu8IAxZAZpgd1qTq86jo1BNOhM91ZZ55SNiZJCElIG2KK63QHweo-0W9F71mvJDjOLGs-PVX0zVNqKMiGIR-Ffggg70UM5pIzARSVVR1VF0UNgO7Oq_6j5wMqphckM1JPSK7ar86mH3" />
+                        } @else {
+                        <span class="material-symbols-outlined text-slate-500 font-light"
+                            style="font-size: 20px;">person</span>
+                        }
+                    </div>
+                </div>
+
+                @if (isMenuOpen()) {
+                <div
+                    class="absolute right-0 top-12 mt-2 w-56 bg-white rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.15)] border border-slate-100 py-2 z-50 overflow-hidden">
+                    @if (authService.authStatus() === 'authenticated') {
+                    <button
+                        class="w-full text-left px-4 py-3 hover:bg-slate-100 text-sm font-semibold text-slate-800 transition-colors">Perfil</button>
+                    <button
+                        class="w-full text-left px-4 py-3 hover:bg-slate-100 text-sm font-medium text-slate-600 transition-colors">
+                        @if (authService.isHost()) {
+                        Modo Anfitrión
+                        } @else {
+                        Ser Anfitrión
+                        }
+                    </button>
+                    <div class="h-px bg-slate-200 my-1"></div>
+                    <button (click)="logout()"
+                        class="w-full text-left px-4 py-3 hover:bg-slate-100 text-sm font-medium text-red-600 transition-colors">Logout</button>
+                    } @else {
+                    <button (click)="isMenuOpen.set(false)" routerLink="auth/login"
+                        class="w-full text-left px-4 py-3 hover:bg-slate-100 text-sm font-semibold text-slate-800 transition-colors">Iniciar
+                        sesión</button>
+                    <button (click)="isMenuOpen.set(false)" routerLink="auth/register"
+                        class="w-full text-left px-4 py-3 hover:bg-slate-100 text-sm font-medium text-slate-600 transition-colors">Registrarse</button>
+                    }
+                </div>
+                }
+            </div>
         </div>
-    </nav>
+    </div>
+</nav>

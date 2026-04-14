@@ -1,8 +1,9 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { LoginForm } from '../../components/login-form/login-form';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router } from '@angular/router';
 import { SocialButtons } from "../../components/social-buttons/social-buttons";
-import { Logo } from "../../../../shared/components/logo/logo";
+import { LoginRequest } from '../../interfaces/login.interface';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login-page',
@@ -11,4 +12,23 @@ import { Logo } from "../../../../shared/components/logo/logo";
   styleUrl: './login-page.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginPage { }
+export class LoginPage {
+  private authService = inject(AuthService);
+  private router = inject(Router);
+
+  backendErrors = signal<any | null>(null);
+
+  onLogin(credentials: LoginRequest) {
+    this.backendErrors.set(null);
+    this.authService.login(credentials).subscribe({
+      next: (response) => {
+        // Navigate or handle successful login as needed
+        this.router.navigate(['/']);
+      },
+      error: (error) => {
+        console.error('Login error', error);
+        this.backendErrors.set(error.error);
+      }
+    });
+  }
+}
